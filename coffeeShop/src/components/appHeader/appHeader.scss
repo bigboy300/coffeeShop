@@ -1,0 +1,13 @@
+@import '../../style/variables.scss';
+.app {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title a span {
+    color: $main-color;
+  }
+  &__menu ul {
+    display: flex;
+  }
+}
