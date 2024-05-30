@@ -1,5 +1,66 @@
-@import '../../style/variables.scss';
+@import './variables.scss';
 .button {
   min-width: 101px;
   height: 38px;
+  text-align: center;
+  border: none;
+}
+
+.button__main {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0 5px;
+  line-height: 38px;
+  background: $main-color;
+  position: relative;
+  color: #fff;
+
+  &::before,
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  &::before {
+    right: 100%;
+    border-top: 10px solid transparent;
+    border-right: 10px solid $main-color;
+  }
+
+  &::after {
+    left: 100%;
+    border-left: 10px solid $main-color;
+    border-bottom: 10px solid transparent;
+  }
+}
+.button__secondary {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0 5px;
+  line-height: 38px;
+  background: $grey;
+  position: relative;
+  color: #fff;
+
+  &::before,
+  &:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+  &::before {
+    right: 100%;
+    border-top: 10px solid transparent;
+    border-right: 10px solid $grey;
+  }
+
+  &::after {
+    left: 100%;
+    border-left: 10px solid $grey;
+    border-bottom: 10px solid transparent;
+  }
 }
