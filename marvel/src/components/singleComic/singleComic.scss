@@ -1,0 +1,31 @@
+@import '../../style/variables.scss';
+.single-comic {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 293px 550px auto;
+  column-gap: 50px;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  &__name {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  &__price {
+    color: $main-color;
+  }
+  &__descr {
+    font-size: 18px;
+  }
+  &__price {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__back {
+    justify-self: end;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}

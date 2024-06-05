@@ -1,0 +1,59 @@
+@import './variables.scss';
+
+.button {
+  cursor: pointer;
+  min-width: 81px;
+  height: 38px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  transition: 0.3s transform;
+  &__main {
+    background: $main-color;
+  }
+  &__main,
+  &__secondary {
+    line-height: 38px;
+    padding: 0 5px;
+    position: relative;
+    &::before,
+    &:after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+    &::before {
+      right: 100%;
+      border-top: 10px solid transparent;
+      border-right: 10px solid $main-color;
+    }
+
+    &::after {
+      left: 100%;
+      border-left: 10px solid $main-color;
+      border-bottom: 10px solid transparent;
+    }
+  }
+  &__secondary {
+    background: $grey;
+    &::before {
+      border-right: 10px solid $grey;
+    }
+    &::after {
+      border-left: 10px solid $grey;
+    }
+  }
+  &__long {
+    display: block;
+    width: 150px;
+    margin: 45px auto 0 auto;
+  }
+  &:hover {
+    transform: translateY(-5px);
+
+    color: #fff;
+  }
+}

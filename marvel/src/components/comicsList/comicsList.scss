@@ -1,0 +1,26 @@
+@import '../../style/variables.scss';
+.comics__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 225px);
+
+  row-gap: 55px;
+  justify-content: space-between;
+}
+.comics__item {
+  transition: 0.3s transform;
+  &-name {
+    color: $dark;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &-price {
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

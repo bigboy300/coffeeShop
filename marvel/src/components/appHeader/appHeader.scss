@@ -1,0 +1,25 @@
+@import '../../style/variables.scss';
+.app {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    font-size: 28px;
+    line-height: 37px;
+    a span {
+      color: $main-color;
+    }
+  }
+  &__menu ul {
+    display: flex;
+    font-size: 24px;
+    font-weight: bold;
+    a:hover {
+      color: $main-color;
+    }
+    li {
+      margin: 0 8px;
+    }
+  }
+}
